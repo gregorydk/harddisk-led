@@ -1,0 +1,23 @@
+.harddiskled-label {
+    width: 4em;
+    text-align: right;
+}
+
+/*
+.harddiskled-static-icon {
+    font-size: 14px;
+    width: 15px;
+    text-align: left;
+}
+*/
+
+.harddiskled-icon {
+    width: 1.2em;
+    text-align: center;
+    color: royalblue;
+}
+
+.harddiskled-container {
+    margin-left: 2px;
+    margin-right: 2px;
+}
