@@ -22,6 +22,10 @@ let cur;
 let ioSpeed;
 let lastCount, lastSpeed;
 let mode;
+let layoutManager;
+let ioSpeedStaticIcon;
+let ioSpeedStaticIconx;
+let ioSpeedIcon;
 
 function init() {
 
@@ -48,8 +52,7 @@ function init() {
     });
     iconDark = new St.Icon({
         gicon: Gio.icon_new_for_string(Me.path + "/icons/harddisk-dark.svg")
-    });
-    */
+    });*/
 
     ioSpeedStaticIcon = new St.Icon({
         style_class: 'system-status-icon',
@@ -176,14 +179,14 @@ function speedToString(amount) {
         return "0"  + speed_map[0];
 
     let unit = 0;
-    while (amount >= 1000) { // 1MB=1024kB, 1MB/s=1000MB/s
+    while (amount >= 1000) {
         amount /= 1000;
         ++unit;
     }
 
-    if (amount >= 100) // 100MB 100kB 200kB
+    if (amount >= 100)
         digits = 0;
-    else if (amount >= 10) // 10MB 10.2
+    else if (amount >= 10)
         digits = 1;
     else 
         digits = 2;
